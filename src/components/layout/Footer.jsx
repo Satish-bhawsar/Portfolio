@@ -105,7 +105,7 @@ const Footer = () => {
         {/* Bottom bar */}
         <div className="border-t border-white/[0.04] pt-6 flex flex-col sm:flex-row items-center justify-between gap-4">
           <p className="text-slate-600 text-xs flex items-center gap-1.5">
-            © {new Date().getFullYear()} Alex Morgan · Built with
+            © {new Date().getFullYear()} Satish Bhawsar · Built with
             <HiHeart className="w-3 h-3 text-red-500" />
             using React & Tailwind CSS
           </p>
