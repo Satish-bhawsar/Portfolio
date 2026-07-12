@@ -22,7 +22,7 @@ const Hero = () => {
   return (
     <section
       id="hero"
-      className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden pt-20"
+      className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden overflow-x-hidden pt-16 sm:pt-20"
     >
       {/* Animated background orbs */}
       <div className="absolute inset-0 pointer-events-none">
@@ -76,10 +76,10 @@ const Hero = () => {
         variants={staggerContainer}
         initial="hidden"
         animate="visible"
-        className="relative z-10 text-center px-4 sm:px-6 max-w-5xl mx-auto"
+        className="relative z-10 text-center px-4 sm:px-6 max-w-5xl mx-auto w-full"
       >
         {/* Status badge */}
-        <motion.div variants={fadeInDown} className="inline-flex items-center gap-2 mb-8">
+        <motion.div variants={fadeInDown} className="inline-flex items-center gap-2 mb-5 sm:mb-8">
           <div className="flex items-center gap-2 px-4 py-2 rounded-full glass border border-white/10">
             <span className="relative flex h-2 w-2">
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75" />
@@ -92,20 +92,20 @@ const Hero = () => {
         </motion.div>
 
         {/* Headline */}
-        <motion.div variants={fadeInUp} className="mb-6">
-          <h1 className="text-4xl sm:text-6xl lg:text-7xl xl:text-8xl font-black tracking-tight text-white leading-[1.05]">
+        <motion.div variants={fadeInUp} className="mb-4 sm:mb-6">
+          <h1 className="text-3xl sm:text-6xl lg:text-7xl xl:text-8xl font-black tracking-tight text-white leading-[1.1] sm:leading-[1.05]">
             Hi, I'm{" "}
             <span className="gradient-text">{personalInfo.name}</span>
           </h1>
         </motion.div>
 
         {/* Title with animated words */}
-        <motion.div variants={fadeInUp} className="mb-8">
-          <div className="flex items-center justify-center gap-3 flex-wrap">
-            <span className="text-lg sm:text-2xl lg:text-3xl font-semibold text-slate-300">
+        <motion.div variants={fadeInUp} className="mb-5 sm:mb-8">
+          <div className="flex items-center justify-center gap-2 sm:gap-3 flex-wrap">
+            <span className="text-base sm:text-2xl lg:text-3xl font-semibold text-slate-300">
               Full Stack
             </span>
-            <span className="px-4 py-1 rounded-xl bg-gradient-to-r from-indigo-600/30 to-violet-600/30 border border-indigo-500/30 text-indigo-300 text-lg sm:text-2xl lg:text-3xl font-bold">
+            <span className="px-3 sm:px-4 py-1 rounded-xl bg-gradient-to-r from-indigo-600/30 to-violet-600/30 border border-indigo-500/30 text-indigo-300 text-base sm:text-2xl lg:text-3xl font-bold">
               MERN Developer
             </span>
           </div>
@@ -114,7 +114,7 @@ const Hero = () => {
         {/* Description */}
         <motion.p
           variants={fadeInUp}
-          className="text-slate-400 text-base sm:text-lg lg:text-xl max-w-2xl mx-auto leading-relaxed mb-10"
+          className="text-slate-400 text-sm sm:text-lg lg:text-xl max-w-2xl mx-auto leading-relaxed mb-7 sm:mb-10 px-2 sm:px-0"
         >
           {personalInfo.tagline} — I craft{" "}
           <span className="text-white font-medium">scalable web applications</span>,{" "}
@@ -126,7 +126,7 @@ const Hero = () => {
         {/* CTA Buttons */}
         <motion.div
           variants={fadeInUp}
-          className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12"
+          className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 mb-7 sm:mb-12"
         >
           <motion.button
             onClick={() => handleScroll("projects")}
@@ -162,47 +162,51 @@ const Hero = () => {
         {/* Social Links */}
         <motion.div
           variants={fadeInUp}
-          className="flex items-center justify-center gap-4 mb-16"
+          className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 mb-8 sm:mb-16"
         >
-          {[
-            { icon: SiGithub, href: personalInfo.social.github, label: "GitHub" },
-            { icon: FaLinkedinIn, href: personalInfo.social.linkedin, label: "LinkedIn" },
-            { icon: FaTwitter, href: personalInfo.social.twitter, label: "Twitter" },
-          ].map(({ icon: Icon, href, label }) => (
-            <motion.a
-              key={label}
-              href={href}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="w-10 h-10 rounded-xl glass border border-white/10 flex items-center justify-center text-slate-400 hover:text-white hover:border-indigo-500/40 transition-all duration-200"
-              whileHover={{ scale: 1.1, y: -2 }}
-              whileTap={{ scale: 0.95 }}
-              aria-label={label}
+          <div className="flex items-center gap-3">
+            {[
+              { icon: SiGithub, href: personalInfo.social.github, label: "GitHub" },
+              { icon: FaLinkedinIn, href: personalInfo.social.linkedin, label: "LinkedIn" },
+              { icon: FaTwitter, href: personalInfo.social.twitter, label: "Twitter" },
+            ].map(({ icon: Icon, href, label }) => (
+              <motion.a
+                key={label}
+                href={href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-10 h-10 rounded-xl glass border border-white/10 flex items-center justify-center text-slate-400 hover:text-white hover:border-indigo-500/40 transition-all duration-200"
+                whileHover={{ scale: 1.1, y: -2 }}
+                whileTap={{ scale: 0.95 }}
+                aria-label={label}
+              >
+                <Icon className="w-4 h-4" />
+              </motion.a>
+            ))}
+          </div>
+          <div className="flex items-center gap-2 flex-wrap justify-center">
+            <span className="text-slate-600 text-xs sm:text-sm">or find me at</span>
+            <a
+              href={`mailto:${personalInfo.email}`}
+              className="text-xs sm:text-sm text-indigo-400 hover:text-indigo-300 transition-colors font-medium break-all sm:break-normal"
             >
-              <Icon className="w-4 h-4" />
-            </motion.a>
-          ))}
-          <span className="text-slate-600 text-sm">or find me at</span>
-          <a
-            href={`mailto:${personalInfo.email}`}
-            className="text-sm text-indigo-400 hover:text-indigo-300 transition-colors font-medium"
-          >
-            {personalInfo.email}
-          </a>
+              {personalInfo.email}
+            </a>
+          </div>
         </motion.div>
 
         {/* Stats */}
         <motion.div
           variants={scaleIn}
-          className="grid grid-cols-2 sm:grid-cols-4 gap-4 max-w-2xl mx-auto"
+          className="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4 max-w-2xl mx-auto"
         >
           {personalInfo.stats.map((stat) => (
             <div
               key={stat.label}
-              className="glass border border-white/[0.06] rounded-xl p-4 text-center"
+              className="glass border border-white/[0.06] rounded-xl p-3 sm:p-4 text-center"
             >
-              <div className="text-2xl font-black gradient-text mb-1">{stat.value}</div>
-              <div className="text-xs text-slate-500 font-medium">{stat.label}</div>
+              <div className="text-xl sm:text-2xl font-black gradient-text mb-0.5 sm:mb-1">{stat.value}</div>
+              <div className="text-xs text-slate-500 font-medium leading-tight">{stat.label}</div>
             </div>
           ))}
         </motion.div>
@@ -213,7 +217,7 @@ const Hero = () => {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 2 }}
-        className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2"
+        className="absolute bottom-6 sm:bottom-8 left-1/2 -translate-x-1/2 hidden sm:flex flex-col items-center gap-2"
       >
         <span className="text-xs text-slate-600 tracking-widest uppercase">Scroll</span>
         <motion.div
