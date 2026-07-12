@@ -1,0 +1,25 @@
+export const personalInfo = {
+  name: "Satish Bhawsar",
+  title: "Full Stack MERN Developer",
+  tagline: "Building scalable web experiences",
+  bio: "I'm a passionate Full Stack Developer with 1+ years of experience crafting high-performance web applications. I specialize in the MERN stack, turning complex ideas into elegant, scalable solutions that users love.",
+  bioExtended: "From designing pixel-perfect UIs to architecting robust backend systems, I bring a holistic approach to every project. I'm deeply passionate about clean code, developer experience, and delivering products that make a real impact.",
+  email: "satishbhawsar92@gmail.com",
+  phone: "+91 7772071030",
+  location: "Indore, India",
+  availability: "Available for Freelance",
+  resumeUrl: "/resume.pdf",
+  avatar: "/avatar.jpg",
+  social: {
+    github: "https://github.com/Satish-bhawsar",
+    linkedin: "https://www.linkedin.com/in/satish-bhawsar",
+    twitter: "https://twitter.com",
+    instagram: "https://instagram.com",
+  },
+  stats: [
+    { value: "1+", label: "Years Experience" },
+    { value: "5+", label: "Projects Built" },
+    { value: "5+", label: "Happy Clients" },
+    { value: "1K+", label: "GitHub Commits" },
+  ],
+};

@@ -1,0 +1,86 @@
+export const skillCategories = [
+  {
+    id: "frontend",
+    label: "Frontend",
+    color: "#6366f1",
+    skills: [
+      { name: "React.js", level: 90, icon: "SiReact" },
+      { name: "JavaScript", level: 90, icon: "SiJavascript" },
+      { name: "HTML5", level: 95, icon: "SiHtml5" },
+      { name: "CSS3", level: 90, icon: "SiCss3" },
+      { name: "Tailwind CSS", level: 92, icon: "SiTailwindcss" },
+      { name: "Framer Motion", level: 82, icon: "SiFramer" },
+      { name: "React Router", level: 88, icon: "SiReactrouter" },
+      { name: "Axios", level: 90, icon: "SiAxios" },
+    ],
+  },
+
+  {
+    id: "backend",
+    label: "Backend",
+    color: "#06b6d4",
+    skills: [
+      { name: "Node.js", level: 88, icon: "SiNodedotjs" },
+      { name: "Express.js", level: 88, icon: "SiExpress" },
+      { name: "REST API", level: 90, icon: "SiPostman" },
+      { name: "JWT Authentication", level: 88, icon: "SiJsonwebtokens" },
+      { name: "Socket.io", level: 75, icon: "SiSocketdotio" },
+      { name: "Cloudinary", level: 85, icon: "SiCloudinary" },
+      { name: "Zod Validation", level: 82, icon: "SiZod" },
+      { name: "Nodemailer", level: 80, icon: "SiMaildotru" },
+    ],
+  },
+
+  {
+    id: "database",
+    label: "Database",
+    color: "#10b981",
+    skills: [
+      { name: "MongoDB", level: 90, icon: "SiMongodb" },
+      { name: "Mongoose", level: 88, icon: "SiMongoose" },
+      { name: "MongoDB Atlas", level: 85, icon: "SiMongodb" },
+      { name: "Database Design", level: 85, icon: "SiDatabricks" },
+    ],
+  },
+
+  {
+    id: "tools",
+    label: "Tools & Deployment",
+    color: "#f59e0b",
+    skills: [
+      { name: "Git", level: 88, icon: "SiGit" },
+      { name: "GitHub", level: 88, icon: "SiGithub" },
+      { name: "Docker", level: 75, icon: "SiDocker" },
+      { name: "AWS (Deployment)", level: 70, icon: "SiAmazon" },
+      { name: "Render", level: 88, icon: "SiRender" },
+      { name: "Vite", level: 90, icon: "SiVite" },
+      { name: "React Query", level: 85, icon: "SiReactquery" },
+      { name: "Zustand", level: 85, icon: "SiZustand" },
+    ],
+  },
+];
+
+export const techStack = [
+  { name: "React", icon: "SiReact", color: "#61DAFB" },
+  { name: "Vite", icon: "SiVite", color: "#646CFF" },
+  { name: "JavaScript", icon: "SiJavascript", color: "#F7DF1E" },
+  { name: "HTML5", icon: "SiHtml5", color: "#E34F26" },
+  { name: "CSS3", icon: "SiCss3", color: "#1572B6" },
+  { name: "Tailwind CSS", icon: "SiTailwindcss", color: "#38BDF8" },
+  { name: "Node.js", icon: "SiNodedotjs", color: "#339933" },
+  { name: "Express.js", icon: "SiExpress", color: "#ffffff" },
+  { name: "MongoDB", icon: "SiMongodb", color: "#47A248" },
+  { name: "Mongoose", icon: "SiMongoose", color: "#880000" },
+  { name: "Cloudinary", icon: "SiCloudinary", color: "#3448C5" },
+  { name: "Socket.io", icon: "SiSocketdotio", color: "#ffffff" },
+  { name: "JWT", icon: "SiJsonwebtokens", color: "#000000" },
+  { name: "React Query", icon: "SiReactquery", color: "#FF4154" },
+  { name: "Zustand", icon: "SiZustand", color: "#7A4E2D" },
+  { name: "Zod", icon: "SiZod", color: "#3068B7" },
+  { name: "Axios", icon: "SiAxios", color: "#5A29E4" },
+  { name: "Git", icon: "SiGit", color: "#F05032" },
+  { name: "GitHub", icon: "SiGithub", color: "#ffffff" },
+  { name: "Docker", icon: "SiDocker", color: "#2496ED" },
+  { name: "AWS", icon: "SiAmazon", color: "#FF9900" },
+  { name: "Render", icon: "SiRender", color: "#46E3B7" },
+];
