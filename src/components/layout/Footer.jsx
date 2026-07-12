@@ -52,10 +52,10 @@ const Footer = () => {
           <div className="sm:col-span-2 lg:col-span-2">
             <div className="flex items-center gap-2 mb-4">
               <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-indigo-500 to-violet-600 flex items-center justify-center text-white font-bold text-sm">
-                A
+                SB
               </div>
               <span className="text-white font-bold text-base">
-                Alex<span className="gradient-text">Morgan</span>
+                Satish<span className="gradient-text">Bhawsar</span>
               </span>
             </div>
             <p className="text-slate-500 text-sm leading-relaxed max-w-xs mb-6">

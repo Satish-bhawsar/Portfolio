@@ -49,11 +49,10 @@ const Navbar = () => {
         initial={{ y: -80, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-          scrolled
-            ? "glass border-b border-white/[0.06] shadow-xl shadow-black/20"
-            : "bg-transparent"
-        }`}
+        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled
+          ? "glass border-b border-white/[0.06] shadow-xl shadow-black/20"
+          : "bg-transparent"
+          }`}
       >
         <div className="container-width px-5 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16">
@@ -65,10 +64,10 @@ const Navbar = () => {
               whileHover={{ scale: 1.02 }}
             >
               <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-indigo-500 to-violet-600 flex items-center justify-center text-white font-bold text-sm">
-                A
+                SB
               </div>
               <span className="text-white font-semibold text-sm">
-                Alex<span className="gradient-text">Morgan</span>
+                Satish<span className="gradient-text">Bhawsar</span>
               </span>
             </motion.a>
 
@@ -81,11 +80,10 @@ const Navbar = () => {
                   <button
                     key={link.label}
                     onClick={() => handleNavClick(link.href)}
-                    className={`relative px-3 py-2 rounded-lg text-sm font-medium transition-all duration-200 cursor-pointer ${
-                      isActive
-                        ? "text-white"
-                        : "text-slate-400 hover:text-white hover:bg-white/5"
-                    }`}
+                    className={`relative px-3 py-2 rounded-lg text-sm font-medium transition-all duration-200 cursor-pointer ${isActive
+                      ? "text-white"
+                      : "text-slate-400 hover:text-white hover:bg-white/5"
+                      }`}
                   >
                     {isActive && (
                       <motion.span
