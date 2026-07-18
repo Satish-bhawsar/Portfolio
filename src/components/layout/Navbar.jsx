@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { HiMenuAlt3, HiX } from "react-icons/hi";
 import { useActiveSection } from "../../hooks/useActiveSection";
+import logo from '../../assets/Slogo2.png';
 
 const navLinks = [
   { label: "About", href: "#about" },
@@ -64,7 +65,7 @@ const Navbar = () => {
               whileHover={{ scale: 1.02 }}
             >
               <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-indigo-500 to-violet-600 flex items-center justify-center text-white font-bold text-sm">
-                SB
+                <img src={logo} alt="logo" className="rounded-lg"/>
               </div>
               <span className="text-white font-semibold text-sm">
                 Satish<span className="gradient-text">Bhawsar</span>

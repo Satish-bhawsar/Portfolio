@@ -4,7 +4,7 @@ import { SiGithub } from "react-icons/si";
 import { FaLinkedinIn, FaTwitter } from "react-icons/fa";
 import { personalInfo } from "../../data/personal";
 import { fadeInUp, viewportConfig } from "../../utils/animations";
-
+import logo from '../../assets/Slogo2.png'
 const navGroups = [
   {
     label: "Navigation",
@@ -52,7 +52,7 @@ const Footer = () => {
           <div className="sm:col-span-2 lg:col-span-2">
             <div className="flex items-center gap-2 mb-4">
               <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-indigo-500 to-violet-600 flex items-center justify-center text-white font-bold text-sm">
-                SB
+                <img src={logo} alt="logo" className="rounded-lg" />
               </div>
               <span className="text-white font-bold text-base">
                 Satish<span className="gradient-text">Bhawsar</span>
